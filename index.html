@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherMain</title>
+    <link rel="stylesheet" href="/src/style.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="town">
+            <form>
+                <input type="text" placeholder="Enter your city" id="city">
+                <input class="button" type="submit" value="Search">
+					 <input class="button_current" type="submit" value="Current">
+            </form>
+            <h1>Kiev, Ukraine</h1>
+            <h3 class="day_time">Thursday 12:00</h3>
+            <h3 class="cloud" >Cloudy</h3>
+        </div>
+        <div class="main_block">
+            <div class="block_temperature">
+                <i>☁️</i>
+                <div class="temperature">
+                    <div class="degree">-</div>
+                    <div class="unit">
+							<a href="#" id="celsius">°С</a>
+							<a href="#" id="fahrenheit">°F</a>
+						  </div>
+                </div>
+            </div>
+            <div class="block_discribe">
+                <h3>Hunidity: <span class="humid"></span>%</h3>
+                <h3>Wind: <span class="wind"></span> <span class="mile">km/h</span></h3>
+            </div>
+        </div>
+        <div class="switch">
+            <div class="tabs">
+                <div class="tab">
+                    <input type="radio" id="tab1" name="tab-group" checked>
+                    <label for="tab1" class="tab-title">Temperature</label> 
+                    <section class="tab-content">Один
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsum reprehenderit, consequatur perferendis assumenda culpa rem possimus maiores enim reiciendis optio doloribus repudiandae fugiat? Excepturi porro at aliquam recusandae nesciunt?
+                    </section>
+                </div> 
+                <div class="tab">
+                    <input type="radio" id="tab2" name="tab-group">
+                    <label for="tab2" class="tab-title">Precipitation</label> 
+                    <section class="tab-content">Два</section>
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab3" name="tab-group">
+                    <label for="tab3" class="tab-title">Wind</label> 
+                    <section class="tab-content">Три</section> 
+                </div> 
+               </div>
+        </div>
+    </div>
+    <script src="/src/apps.js"></script>
+</body>
+</html>
