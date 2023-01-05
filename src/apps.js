@@ -2,7 +2,7 @@ let now = new Date();
 let dayDay = now.getDay();
 let hour = now.getHours();
 let minute = now.getMinutes();
-let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 let dayss = document.querySelector(".day_time");
 dayss.innerHTML = `${days[dayDay]} ${hour}:${minute}`;
 
