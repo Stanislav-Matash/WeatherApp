@@ -1,7 +1,13 @@
 let now = new Date();
 let dayDay = now.getDay();
 let hour = now.getHours();
+if (hour < 10) {
+	hour = `0${hour}`;
+}
 let minute = now.getMinutes();
+if (minute < 10) {
+	minute = `0${minute}`;
+}
 let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 let dayss = document.querySelector(".day_time");
 dayss.innerHTML = `${days[dayDay]} ${hour}:${minute}`;
@@ -24,7 +30,8 @@ function showTmperature(response) {
 	wind.innerHTML = Math.round(response.data.wind.speed);
 	let cloud = document.querySelector("h3.cloud");
 	cloud.innerHTML = response.data.weather[0].description;
-	
+	let icon = document.querySelector(".icon");
+		icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 axios.get(`${apiUrl}&appid=${apiKey}`).then(showTmperature);
 }
