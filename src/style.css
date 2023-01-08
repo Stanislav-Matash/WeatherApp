@@ -88,7 +88,7 @@ a {
 }
 .temperature {
     display: flex;
-	 color: rgb(204, 240, 247);
+	 color: rgba(87, 209, 233, 1);
 }
 .degree {
     font-size: 50px;
@@ -98,9 +98,7 @@ a {
     font-size: 19px;
     font-weight: 600;
 }
-.button_cel_fah:hover {
-	color: azure;
-}
-.block_discribe {
-
+.active {
+	color: rgba(87, 209, 233, 1);
+	cursor: default;
 }

@@ -31,7 +31,9 @@ function showTmperature(response) {
 	let cloud = document.querySelector("h3.cloud");
 	cloud.innerHTML = response.data.weather[0].description;
 	let icon = document.querySelector(".icon");
-		icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+	icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+	celsiusTemp = response.data.main.temp;
 }
 axios.get(`${apiUrl}&appid=${apiKey}`).then(showTmperature);
 }
@@ -43,29 +45,26 @@ form.addEventListener("submit", search);
 function changeTempFahre(event) {
 	event.preventDefault();
 	let tempElement = document.querySelector(".degree");
-	let temp = tempElement.innerHTML;
-	temp = Number(temp);
-	tempElement.innerHTML = Math.round(temp *1.8 + 32);
-	let mile = document.querySelector(".wind");
-	mile.innerHTML = `${Math.round(mile.textContent / 1.609344)}`;
-	let mileUnit = document.querySelector(".mile");
-	mileUnit.innerHTML = `m/h`;
-}
-function changeTempCels(event) {
-	event.preventDefault();
-	let tempElement = document.querySelector(".degree");
-	let temp = tempElement.innerHTML;
-	temp = Number(temp);
-	tempElement.innerHTML = Math.round((temp - 32) / 1.8);
-	let kmUnit = document.querySelector(".mile");
-	kmUnit.innerHTML = `km/h`;
-}
-let cels = document.querySelector("#celsius");
-cels.addEventListener("click", changeTempCels);
+	celsius.classList.remove("active");
+	fahrenheit.classList.add("active");
+	
+	let tempFahre = (celsiusTemp * 9) / 5 + 32;
+	tempElement.innerHTML = Math.round(tempFahre);
+	}
+let celsiusTemp = null;
 let fahre = document.querySelector("#fahrenheit");
 fahre.addEventListener("click", changeTempFahre);
 
 
+function changeTempCelsius(event) {
+	event.preventDefault();
+	celsius.classList.add("active");
+	fahrenheit.classList.remove("active");
+	let tempElement2 = document.querySelector(".degree");
+	tempElement2.innerHTML = Math.round(celsiusTemp);
+}
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeTempCelsius);
 
 
 
