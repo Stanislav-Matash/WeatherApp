@@ -15,39 +15,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div class="container">
-      <form class="form">
-         <input class="inputtext" type="search" placeholder="Enter your city" id="city" autocomplete="off">
-			<input class="button" type="submit" value="Search">
-			<input class="button_current" type="submit" value="Current">
-      </form>
-		<div class="maincont">
-			<div class="town">	
-				<h1>Kiev, Ukraine</h1>
+   	<div class="container">
+			<form class="form">
+				<input class="inputtext" type="search" placeholder="Enter your city" id="city" autocomplete="off">
+				<input class="button" type="submit" value="Search">
+				<input class="button-current" type="submit" value="Current">
+			</form>
+			<div class="maincont">
+					<div class="town">	
+						<h1>-----</h1>
+						<h3 class="cloud">description</h3>
+					</div>
+					<div class="time">	
+						<h3 class="daytime">Last updated</h3>
+						<h3 class="day_time">Current date</h3>
+					</div>
 			</div>
-			<div class="time">	
-				<h3 class="day_time">Current date</h3>
-				<h3 class="cloud" >Cloudy</h3>
+			<div class="main_block">
+					<div class="block_temperature">
+							 <img class="icon" src="http://openweathermap.org/img/wn/50d@2x.png">
+						 <div class="temperature">
+							  <div class="degree">-</div>
+							  <div class="unit">
+									<a class="active" href="#" id="celsius">°С</a>
+									<a  href="#" id="fahrenheit">°F</a>
+								  </div>
+						 </div>
+					</div>
+					<div class="block_discribe">
+						 <h3>Humidity: <span class="humid"></span>%</h3>
+						 <h3>Wind: <span class="wind"></span> <span class="mile">km/h</span></h3>
+					</div>
+			</div>
+			<div class="forecast container__forecast" id="forecast">
+				<!-- <div class="forecast__column">
+					<div class="forecast__day">friday</div>
+					<img class="farecast__icon" src="http://openweathermap.org/img/wn/50d@2x.png" alt="icon">
+					<div class="forecast__temperature">
+						<p class="forecast__temperature-day"><span class="day">10</span>°</p>
+						<p class="forecast__temperature-night"><span class="night">5</span>°</p>
+					</div>
+				</div> -->
 			</div>
 		</div>
-        <div class="main_block">
-            <div class="block_temperature">
-					 <img class="icon">
-                <div class="temperature">
-                    <div class="degree">-</div>
-                    <div class="unit">
-							<a class="active" href="#" id="celsius">°С</a>
-							<a  href="#" id="fahrenheit">°F</a>
-						  </div>
-                </div>
-            </div>
-            <div class="block_discribe">
-                <h3>Humidity: <span class="humid"></span>%</h3>
-                <h3>Wind: <span class="wind"></span> <span class="mile">km/h</span></h3>
-            </div>
-        </div>
-        
-   </div>
-   <script src="/src/apps.js"></script>
+	<script src="/src/apps.js"></script>
 </body>
 </html>

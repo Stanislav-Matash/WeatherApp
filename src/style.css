@@ -2,70 +2,76 @@
 h1,h2,h3,h4,h5,h6 {
    font-family: 'Merriweather', serif;
 }
-
-
+body {
+	color: black;
+}
 .container {
    padding: 10px 10px 0px 10px;
-   max-width: 100%;
-	margin: 0 auto;
-  	background-image: url(/image/milky-way-gead.jpg);
-	background-size: cover;
-
+   max-width: 95%;
+	margin: 10px auto 0;
+	background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+	border: 2px solid rgb(146, 124, 243);
 }
 .form {
 	margin: 10px 5px;
 	text-align: center;
 }
 .inputtext {
-	padding: 5px 15px;
-	background-color: transparent;
-	color: white;
+	padding: 5px 10px;
+	background-color: rgb(197, 195, 204);
+	border-radius: 15px;
+	border: 1px solid rgb(197, 195, 204);
 }
 .inputtext:hover {
-	border: 1px solid rgb(204, 240, 247);
+	border: 1px solid rgb(71, 80, 82);
 	border-radius: 15px;
 }
-
 .button {
-	padding: 5px 15px;
+	padding: 5px 10px;
 	color: white;
-	background: rgb(34, 29, 121);
-		background: linear-gradient(90deg, rgba(34, 29, 121, 1) 0%, rgba(95, 95, 167, 1) 35%, rgba(87, 209, 233, 1) 100%);
+	background: rgb(115, 111, 182);
 	border-radius: 15px;
-	margin-right: 5px;
+	margin: 0px 3px;
 }
-
-.button_current {
-	padding: 5px 15px;
+.button:hover, .button-current:hover {
+	background: rgb(133, 94, 170);
+	color: black;
+}
+.button-current {
+	padding: 5px 10px;
 	color: white;
-	background: rgb(34, 29, 121);
-		background: linear-gradient(90deg, rgba(34, 29, 121, 1) 0%, rgba(95, 95, 167, 1) 35%, rgba(87, 209, 233, 1) 100%);
+	background: rgb(115, 111, 182);
 	border-radius: 15px;
 }
-
 .maincont {
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin: 15px 0px;
 }
 .town {
 	text-align: center;
 	margin-right: 30px;
 }
+.time {
+	text-align: center;
+}
+.daytime {
+	color: rgba(0, 0, 0, 0.589);
+	margin-bottom: 5px;
+}
 .icon {
 	font-size: 20px;
+	width: 100px;
 }
 h1 {
-	text-align: left;
-    padding: 15px 0px;
-	color: rgb(204, 240, 247);
-	 text-transform: capitalize;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-bottom: 5px;
 }
 h3{
     margin-bottom: 5px;
-    color:rgb(204, 240, 247);
-	 
 }
 .cloud::first-letter {
 	text-transform: capitalize;
@@ -78,17 +84,12 @@ h3{
 .block_temperature {
    display: flex;
    align-items: center;
-   
 }
 i{
     font-size: 90px;
 }
-a {
-	color: rgb(204, 240, 247);
-}
 .temperature {
     display: flex;
-	 color: rgba(87, 209, 233, 1);
 }
 .degree {
     font-size: 50px;
@@ -99,6 +100,41 @@ a {
     font-weight: 600;
 }
 .active {
-	color: rgba(87, 209, 233, 1);
+	color: black;
 	cursor: default;
 }
+
+
+
+
+.forecast {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+.container__forecast {
+	margin: 10px 5px;
+}
+.forecast__column {
+	font-size: 16px;
+	margin: 5px;
+}
+.forecast__day {
+	opacity: 0.6;
+	font-weight: 600;
+}
+.farecast__icon {
+	width: 48px;
+}
+.forecast__temperature {
+	display: flex;
+}
+.forecast__temperature-day {
+	margin-right: 5px;
+	font-weight: 600;
+}
+.day{}
+.forecast__temperature-night {
+	opacity: 0.6;
+}
+.night {}
