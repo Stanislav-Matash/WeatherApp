@@ -129,12 +129,11 @@ i{
 .forecast__temperature {
 	display: flex;
 }
-.forecast__temperature-day {
+.forecast__temperature-max {
 	margin-right: 5px;
 	font-weight: 600;
 }
-.day{}
-.forecast__temperature-night {
+
+.forecast__temperature-min {
 	opacity: 0.6;
 }
-.night {}
